@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="shortcut icon" href="./assets/icons/android-chrome-192x192.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="./scripts/JSON_Data.js"></script>
+    <script src="./scripts/template.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header container">
+            <img src="./assets/logos/Bestell App- Logo.svg" alt="">
+            <div class="header-burger_menu">
+                <div class="header-burger_menu-div"></div>
+                <div class="header-burger_menu-div"></div>
+                <div class="header-burger_menu-div"></div>
+            </div>  
+        </div>
+    </header>
+
+    <main>
+
+        <section class="main-content">
+            <img src="./assets/img/italian-cuisine.jpg" alt="">
+            <img src="./assets/img/circle_img_pizza.jpg" alt="">
+            <div class="container">
+                <h1>Paradise Pizza</h1>
+                <p class="text-color-evaluation">Bewertung (4,2 von 5 Sternen)</p>
+            </div>
+            <div class="main-content-categories container">
+  
+                <img src="./assets/icons/greater-than-solid-orange.svg" alt="">
+                <ul>
+                    <li><a href="#">Hauptgerichte</a></li>
+                    <li><a href="#">Beilagen</a></li>
+                    <li><a href="#">Getränke</a></li>
+                </ul>
+            
+            </div>
+            <div class="main-content-categorie_img container">
+                <img src="./assets/img/pizza.jpg" alt="">
+                <h3>Hauptgerichte</h3>
+                <div id="main_courses"></div>
+            </div>
+            <div class="main-content-categorie_img container">
+                <img src="./assets/img/salad.jpg" alt="">
+                <h3>Beilagen</h3>
+                <div id="side_dishes"></div>
+            </div>
+            <div class="main-content-categorie_img container">
+                <img src="./assets/img/drinks_pizza.jpg" alt="">
+                <h3>Getränke</h3>
+                <div id="drinks"></div>
+            </div>
+        </section>
+
+        <section class="main-basket">
+            <div class="main-basket-content">
+                <h2>Warenkorb</h2>
+                <div class="main-basket-content-separator"></div>
+            </div>
+            <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
+                <img src="./assets/icons/bag-shopping-solid.svg" alt="">
+                <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+            </div>
+            <div id="main-basket-items"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="./assets/logos/Bestell App- Logo.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>

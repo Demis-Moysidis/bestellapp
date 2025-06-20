@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --main-color: #ff8000;
+    --nav-bg-color: #F7F6F1;
+    --text-color-generally: #DC8136;
+    --text-color-evaluation: #ff8000d3;
+    --product-hover-color: #FEE5CB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 10px 0;
+    padding: 0 25px;
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.text-color-evaluation {
+    color: var(--text-color-evaluation);
+}
+
+/* Header */
+header {
+    background-color: var(--main-color);
+    padding: 15px 0;
+}
+
+header img{
+    width: 150px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-burger_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.header-burger_menu-div {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+}
+
+/* Main */
+main {
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    /* TEST */
+    /* height: 1500px; */
+    position: relative;
+}
+
+.main-content > img:first-child{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main-content > img:nth-child(2){
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 140px;
+    object-fit: cover;
+    border: 1px solid gray
+}
+
+.main-content-categorie_img img{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    object-position: 50% 17%;
+}
+
+.main-content-categories {
+    background-color: var(--nav-bg-color);
+    position: relative;   
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.main-content-categories ul{
+    display: flex;
+    gap: 10px;
+}
+
+.main-content-categories ul{
+    list-style: none;
+    padding: 0;
+}
+
+.main-content-categories a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-content-categories a:hover{
+    color: rgb(94, 88, 88);
+}
+
+.main-content-categories img {
+    width: 30px;
+}
+
+.main-basket {
+    width: 300px;
+    padding: 10px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.main-basket h2{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.main-basket-content{
+    position: sticky;
+    top: 10px;
+}
+
+.main-basket-content-separator{
+    background-color: lightgray;
+    height: 1px;
+}
+
+.main-basket-placeholder_for_items {
+    color: gray;
+    margin-top: clamp(10px, 10vh, 80px);
+}
+
+.main-basket-placeholder_for_items img {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-color);
+    padding: 15px 0;
+}
+
+footer img{
+    width: 100px;
+}
