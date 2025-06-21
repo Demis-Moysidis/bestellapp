@@ -81,3 +81,12 @@ let products = {
     }
   ]
 }
+
+let basketItems = [
+  // {
+  //   "name": "Bier",
+  //   "price": 3.0,
+  //   "amount": 3,
+  //   "categorie": "drinks",
+  // }
+]

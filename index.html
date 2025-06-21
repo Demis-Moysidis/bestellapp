@@ -7,11 +7,12 @@
     <link rel="shortcut icon" href="./assets/icons/android-chrome-192x192.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
-    <script src="./scripts/JSON_Data.js"></script>
-    <script src="./scripts/template.js"></script>
+    <script src="./scripts/JSON_Data.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
+    <script src="./script.js" defer></script>
+    
 </head>
-<body>
+<body onload="init()">
     <header>
         <div class="header container">
             <img src="./assets/logos/Bestell App- Logo.svg" alt="">
@@ -24,7 +25,6 @@
     </header>
 
     <main>
-
         <section class="main-content">
             <img src="./assets/img/italian-cuisine.jpg" alt="">
             <img src="./assets/img/circle_img_pizza.jpg" alt="">
@@ -36,26 +36,26 @@
   
                 <img src="./assets/icons/greater-than-solid-orange.svg" alt="">
                 <ul>
-                    <li><a href="#">Hauptgerichte</a></li>
-                    <li><a href="#">Beilagen</a></li>
-                    <li><a href="#">Getränke</a></li>
+                    <li><a href="#main_courses_area">Hauptgerichte</a></li>
+                    <li><a href="#side_dishes_area">Beilagen</a></li>
+                    <li><a href="#drinks_area">Getränke</a></li>
                 </ul>
             
             </div>
-            <div class="main-content-categorie_img container">
+            <div id="main_courses_area" class="main-content-categorie_img container">
                 <img src="./assets/img/pizza.jpg" alt="">
                 <h3>Hauptgerichte</h3>
-                <div id="main_courses"></div>
+                <div id="main_courses" class="main_products_structure"></div>
             </div>
-            <div class="main-content-categorie_img container">
+            <div id="side_dishes_area" class="main-content-categorie_img container">
                 <img src="./assets/img/salad.jpg" alt="">
                 <h3>Beilagen</h3>
-                <div id="side_dishes"></div>
+                <div id="side_dishes" class="main_products_structure"></div>
             </div>
-            <div class="main-content-categorie_img container">
+            <div id="drinks_area" class="main-content-categorie_img container">
                 <img src="./assets/img/drinks_pizza.jpg" alt="">
                 <h3>Getränke</h3>
-                <div id="drinks"></div>
+                <div id="drinks" class="main_products_structure"></div>
             </div>
         </section>
 
@@ -63,14 +63,14 @@
             <div class="main-basket-content">
                 <h2>Warenkorb</h2>
                 <div class="main-basket-content-separator"></div>
+                
+                <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
+                    <img src="./assets/icons/bag-shopping-solid.svg" alt="">
+                    <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+                </div>
+                <div id="main-basket-items"></div>
             </div>
-            <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
-                <img src="./assets/icons/bag-shopping-solid.svg" alt="">
-                <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
-            </div>
-            <div id="main-basket-items"></div>
         </section>
-
     </main>
 
     <footer>
