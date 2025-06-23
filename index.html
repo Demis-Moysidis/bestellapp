@@ -33,14 +33,12 @@
                 <p class="text-color-evaluation">Bewertung (4,2 von 5 Sternen)</p>
             </div>
             <div class="main-content-categories container">
-  
                 <img src="./assets/icons/greater-than-solid-orange.svg" alt="">
                 <ul>
                     <li><a href="#main_courses_area">Hauptgerichte</a></li>
                     <li><a href="#side_dishes_area">Beilagen</a></li>
                     <li><a href="#drinks_area">Getränke</a></li>
                 </ul>
-            
             </div>
             <div id="main_courses_area" class="main-content-categorie_img container">
                 <img src="./assets/img/pizza.jpg" alt="">
@@ -57,11 +55,16 @@
                 <h3>Getränke</h3>
                 <div id="drinks" class="main_products_structure"></div>
             </div>
+
+            <div id="" class="main-content-responsive_basket">
+                <button onclick="toggleResponsiveBasket('open')" class="main-content-responsive_basket_btn">Warenkorb</button>
+            </div>
         </section>
 
-        <section class="main-basket">
+        <section id="main-basket" class="main-basket">
             <div class="main-basket-content">    
-                <h2>Warenkorb</h2>
+                <h2 id="main-basket-content-title">Warenkorb</h2>
+                <button onclick="toggleResponsiveBasket('close')" id="main-basket-responsive_btn" class="main-content-responsive_basket_btn d_none">Warenkorb</button>    
                 <div class="main-basket-content-separator"></div>
                 <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
                     <img src="./assets/icons/bag-shopping-solid.svg" alt="">
@@ -75,7 +78,7 @@
 
         <section id="main-order_notification" class="main-order_notification">
             <div class="main-order_notification-content">
-                <p>Sie habem eine Testbestellung vorgenommen.</p>
+                <p>Sie haben eine Testbestellung vorgenommen.</p>
                 <button onclick="toggleOrderNotification('close')" class="main-order_notification-btn">Verstanden</button>
             </div>
         </section>

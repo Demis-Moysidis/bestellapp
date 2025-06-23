@@ -1,6 +1,7 @@
 function init(){
     renderAllProductCategories();
     renderBasketItems();
+    handleViewportChange();
 }
 
 function renderAllProductCategories(){
@@ -101,9 +102,27 @@ function sendOrder(){
 function toggleOrderNotification(operator){
     if(operator == 'show'){
         document.getElementById('main-order_notification').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
     }else{
         document.getElementById('main-order_notification').style.display = 'none';
-        document.body.style.overflow = '';
     }
 }
+
+function toggleResponsiveBasket(operator){
+    if(operator == 'open'){
+        document.getElementById('main-basket').classList.remove('main-basket');
+        document.getElementById('main-basket').classList.add('main-basket_responsive');
+        document.getElementById('main-basket-responsive_btn').classList.remove('d_none');
+        document.getElementById('main-basket-content-title').classList.add('d_none');
+    }else{
+        document.getElementById('main-basket').classList.add('main-basket');
+        document.getElementById('main-basket').classList.remove('main-basket_responsive');
+        document.getElementById('main-basket-responsive_btn').classList.add('d_none');
+        document.getElementById('main-basket-content-title').classList.remove('d_none');
+    }
+}
+
+function handleViewportChange(){    
+    window.matchMedia('(max-width: 655px)').addEventListener("change", () => toggleResponsiveBasket('close'));
+}
+     
+
