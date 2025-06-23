@@ -60,16 +60,23 @@
         </section>
 
         <section class="main-basket">
-            <div class="main-basket-content">
+            <div class="main-basket-content">    
                 <h2>Warenkorb</h2>
                 <div class="main-basket-content-separator"></div>
-                
                 <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
                     <img src="./assets/icons/bag-shopping-solid.svg" alt="">
                     <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
                 </div>
                 <div id="main-basket-items"></div>
-                <div id="main-basket-payment"></div>
+                <div id="main-basket-payment"></div>   
+                <button onclick="sendOrder()" id="main-basket-order_btn" class="main-basket-order_btn" disabled>Bestellen</button>
+            </div>
+        </section>
+
+        <section id="main-order_notification" class="main-order_notification">
+            <div class="main-order_notification-content">
+                <p>Sie habem eine Testbestellung vorgenommen.</p>
+                <button onclick="toggleOrderNotification('close')" class="main-order_notification-btn">Verstanden</button>
             </div>
         </section>
     </main>

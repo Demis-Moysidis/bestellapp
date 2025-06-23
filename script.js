@@ -21,9 +21,11 @@ function renderBasketItems(){
     if(basketItems.length != 0){
         document.getElementById('main-basket-placeholder_for_items').classList.add('d_none');
         document.getElementById('main-basket-payment').classList.remove('d_none');
+        document.getElementById('main-basket-order_btn').disabled = false;
     }else{
         document.getElementById('main-basket-placeholder_for_items').classList.remove('d_none');
         document.getElementById('main-basket-payment').classList.add('d_none');
+        document.getElementById('main-basket-order_btn').disabled = true;
     }
     
     let refBaskte = document.getElementById('main-basket-items');
@@ -86,4 +88,22 @@ function renderPaymentSection(){
 
     let refPayment = document.getElementById('main-basket-payment');
     refPayment.innerHTML = renderPayment(paySum);
+}
+
+function sendOrder(){
+    basketItems = [];
+
+    renderBasketItems();
+    renderPaymentSection();
+    toggleOrderNotification('show');
+}
+
+function toggleOrderNotification(operator){
+    if(operator == 'show'){
+        document.getElementById('main-order_notification').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }else{
+        document.getElementById('main-order_notification').style.display = 'none';
+        document.body.style.overflow = '';
+    }
 }

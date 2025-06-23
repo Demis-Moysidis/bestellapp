@@ -9,6 +9,9 @@
     --text-color-generally: #DC8136;
     --text-color-evaluation: #ff8000d3;
     --product-hover-color: #FEE5CB;
+    --responsive-basket-btn: #0069da;
+    --responsive-basket-btn-hober: #074f9c;
+    --order-btn: #ff8000;
 }
 
 * {
@@ -27,6 +30,7 @@ html {
 h1 {
     font-size: 32px;
     margin: 20px 0;
+    width: 40%;
 }
 
 h3 {
@@ -269,13 +273,69 @@ main {
 
 .main-basket-items-structure p {
     margin: 0 0;
-
 }
 
 .main-basket-payment-amounts{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.main-basket-order_btn {
+    background-color: var(--order-btn);
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin-top: 16px;
+}
+
+.main-basket-order_btn:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.main-basket-order_btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+    transform: none;
+}
+
+.main-order_notification {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main-order_notification-btn {
+    background-color: var(--order-btn);
+    border: none;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.main-order_notification-btn:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.main-order_notification-content {
+    background-color: rgb(79, 79, 79);
+    padding: 40px;
+    border-radius: 8px;
 }
 
 #main-basket-items {
@@ -292,4 +352,14 @@ footer {
 
 footer img{
     width: 100px;
+}
+
+@media (max-width: 760px) {
+    h1 {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 615px) {
+    
 }
