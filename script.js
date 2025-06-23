@@ -113,11 +113,13 @@ function toggleResponsiveBasket(operator){
         document.getElementById('main-basket').classList.add('main-basket_responsive');
         document.getElementById('main-basket-responsive_btn').classList.remove('d_none');
         document.getElementById('main-basket-content-title').classList.add('d_none');
+        document.body.style.overflow = 'hidden';
     }else{
         document.getElementById('main-basket').classList.add('main-basket');
         document.getElementById('main-basket').classList.remove('main-basket_responsive');
         document.getElementById('main-basket-responsive_btn').classList.add('d_none');
         document.getElementById('main-basket-content-title').classList.remove('d_none');
+        document.body.style.overflow = '';
     }
 }
 
