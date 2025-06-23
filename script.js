@@ -20,8 +20,10 @@ function renderOneProductCategory(categorieId){
 function renderBasketItems(){
     if(basketItems.length != 0){
         document.getElementById('main-basket-placeholder_for_items').classList.add('d_none');
+        document.getElementById('main-basket-payment').classList.remove('d_none');
     }else{
         document.getElementById('main-basket-placeholder_for_items').classList.remove('d_none');
+        document.getElementById('main-basket-payment').classList.add('d_none');
     }
     
     let refBaskte = document.getElementById('main-basket-items');
@@ -29,6 +31,8 @@ function renderBasketItems(){
     for (let j = 0; j < basketItems.length; j++) {
         refBaskte.innerHTML += renderOneBasketItem(j);  
     }
+
+    renderPaymentSection();
 }
 
 function addToBasket(kategorieProduct, indexProduct){
@@ -71,4 +75,15 @@ function updateBasketItem(operation, indexBasketItem){
             basketItems.splice(indexBasketItem, 1);
     }
     renderBasketItems();
+}
+
+function renderPaymentSection(){
+    let paySum = 0;
+    for (let i = 0; i < basketItems.length; i++) {
+        let itemSum = basketItems[i].price * basketItems[i].amount;
+        paySum += itemSum;
+    }
+
+    let refPayment = document.getElementById('main-basket-payment');
+    refPayment.innerHTML = renderPayment(paySum);
 }

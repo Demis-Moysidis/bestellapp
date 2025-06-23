@@ -51,6 +51,15 @@ h5 {
     display: none;
 }
 
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grey-text {
+    color: grey;
+}
+
 .text-color-evaluation {
     color: var(--text-color-evaluation);
 }
@@ -212,7 +221,8 @@ main {
 
 .main-basket-content-separator{
     background-color: lightgray;
-    height: 1px;
+    height: 1.5px;
+    margin: 15px 0 10px;
 }
 
 .main-basket-placeholder_for_items {
@@ -262,10 +272,16 @@ main {
 
 }
 
-#main-basket-items {
+.main-basket-payment-amounts{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+#main-basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Footer */

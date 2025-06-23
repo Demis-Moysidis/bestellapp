@@ -22,3 +22,22 @@ function renderOneBasketItem(indexBasketItem){
                     </div>
                     `
 }
+
+function renderPayment(paySum){
+    return /*html*/`<div class="main-basket-content-separator"></div>
+                    <div class="main-basket-payment-amounts">
+                        <div class="space-between grey-text">
+                            <span>Zwischensumme</span>
+                            <span>${paySum.toFixed(2).replace(".", ",")}€</span>
+                        </div>
+                        <div class="space-between grey-text">
+                            <span>Lieferkosten</span>
+                            <span>5,00€</span>
+                        </div>
+                        <div class="space-between">
+                            <span><b>Gesamt</b></span>
+                            <span><b>${(paySum + 5).toFixed(2).replace(".", ",")}€</b></span>
+                        </div> 
+                    </div>
+                    `
+}
