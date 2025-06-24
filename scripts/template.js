@@ -14,9 +14,9 @@ function renderOneBasketItem(indexBasketItem){
                         <h5>${basketItems[indexBasketItem].name}</h5>
                         <div class="main-basket-items-structure">
                             <div onclick="updateBasketItem('minus', ${indexBasketItem})"><img src="./assets/icons/minus-solid.svg" alt=""></div>
-                            <p>${basketItems[indexBasketItem].amount}x</p>
+                            <p id="main-basket-item_amount-${indexBasketItem}">${basketItems[indexBasketItem].amount}x</p>
                             <div onclick="updateBasketItem('plus', ${indexBasketItem})"><img src="./assets/icons/plus-solid.svg" alt=""></div>
-                            <p>${(basketItems[indexBasketItem].price*basketItems[indexBasketItem].amount).toFixed(2).replace('.', ',')}€</p>
+                            <p id="main-basket-item_price-${indexBasketItem}">${(basketItems[indexBasketItem].price*basketItems[indexBasketItem].amount).toFixed(2).replace('.', ',')}€</p>
                             <div onclick="updateBasketItem('delete', ${indexBasketItem})"><img src="./assets/icons/trash-solid.svg" alt=""></div>
                         </div>
                     </div>
