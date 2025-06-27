@@ -55,24 +55,22 @@
                 <h3>Getränke</h3>
                 <div id="drinks" class="main_products_structure"></div>
             </div>
-
-            <div id="" class="main-content-responsive_basket">
-                <button onclick="toggleResponsiveBasket('open')" class="main-content-responsive_basket_btn">Warenkorb</button>
-            </div>
         </section>
 
         <section id="main-basket" class="main-basket">
             <div class="main-basket-content">    
                 <h2 id="main-basket-content-title">Warenkorb</h2>
-                <button onclick="toggleResponsiveBasket('close')" id="main-basket-responsive_btn" class="main-content-responsive_basket_btn d_none">Warenkorb</button>    
+                <button onclick="toggleResponsiveBasket()" id="main-basket-responsive_btn" class="main-content-responsive_basket_btn">Warenkorb</button>    
                 <div class="main-basket-content-separator"></div>
-                <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
-                    <img src="./assets/icons/bag-shopping-solid.svg" alt="">
-                    <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+                <div class="main-basket-content-scroll">
+                    <div id="main-basket-placeholder_for_items" class="main-basket-placeholder_for_items">
+                        <img src="./assets/icons/bag-shopping-solid.svg" alt="">
+                        <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+                    </div>
+                    <div id="main-basket-items"></div>
+                    <div id="main-basket-payment"></div>   
+                    <button onclick="sendOrder()" id="main-basket-order_btn" class="main-basket-order_btn" disabled>Bestellen</button>
                 </div>
-                <div id="main-basket-items"></div>
-                <div id="main-basket-payment"></div>   
-                <button onclick="sendOrder()" id="main-basket-order_btn" class="main-basket-order_btn" disabled>Bestellen</button>
             </div>
         </section>
 

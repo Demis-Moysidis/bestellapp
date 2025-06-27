@@ -1,3 +1,5 @@
+let responsiveBasketOpen = false;
+
 function init(){
     renderAllProductCategories();
     renderBasketItems();
@@ -103,24 +105,29 @@ function toggleOrderNotification(operator){
     }
 }
 
-function toggleResponsiveBasket(operator){
-    if(operator == 'open'){
-        document.getElementById('main-basket').classList.remove('main-basket');
-        document.getElementById('main-basket').classList.add('main-basket_responsive');
-        document.getElementById('main-basket-responsive_btn').classList.remove('d_none');
-        document.getElementById('main-basket-content-title').classList.add('d_none');
-        document.body.style.overflow = 'hidden';
-    }else{
-        document.getElementById('main-basket').classList.add('main-basket');
-        document.getElementById('main-basket').classList.remove('main-basket_responsive');
-        document.getElementById('main-basket-responsive_btn').classList.add('d_none');
-        document.getElementById('main-basket-content-title').classList.remove('d_none');
-        document.body.style.overflow = '';
-    }
+function toggleResponsiveBasket(){
+        document.getElementById('main-basket').classList.toggle('slide-in');
+        document.body.classList.toggle('no-scroll');
+
+        if(responsiveBasketOpen == false){
+            responsiveBasketOpen = true;
+        }else{
+            responsiveBasketOpen = false;
+        }
 }
 
 function handleViewportChange(){    
-    window.matchMedia('(max-width: 655px)').addEventListener("change", () => toggleResponsiveBasket('close'));
+    window.matchMedia('(max-width: 655px)').addEventListener("change", (e) => {
+        if(e.matches) {
+            if(responsiveBasketOpen){
+                document.body.classList.add('no-scroll');
+            }else{
+                document.body.classList.remove('no-scroll');
+            }
+        }else{
+            document.body.classList.remove('no-scroll');
+        }
+    });
 }
      
 function rerenderBasketItem(indexBasketItem){
